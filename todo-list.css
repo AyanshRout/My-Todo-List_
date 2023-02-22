@@ -1,0 +1,100 @@
+.Add,
+        .Clear {
+            border: none;
+            margin-left: 5px;
+            height: 22px;
+            border-radius: 11px;
+            font-weight: bold;
+            color: white;
+            transition: background-color 0.15s, color 0.15s;
+
+        }
+
+        .Add {
+            background-color: red;
+        }
+
+        .Clear {
+            background-color: rgb(29, 155, 240);
+        }
+
+        .Add:hover {
+            color: red;
+            background-color: white;
+            border: solid;
+            cursor: pointer;
+
+        }
+
+        .Clear:hover {
+            color: rgb(29, 155, 240);
+            background-color: white;
+            border: solid;
+            cursor: pointer;
+
+        }
+
+        .Add:active {
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .Clear:active {
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .date {
+            height: 21.5px;
+            margin-left: 5px;
+            width: 105px;
+            border-radius: 2px;
+            border-width: 1px;
+            border-color: blue;
+        }
+
+        .input {
+            height: 20.5px;
+            border-color: rgb(4, 0, 255);
+            border-width: 1px;
+            border-radius: 2px;
+        }
+
+         .inputCenter {
+            border: solid;
+            border-width: 1px;
+            height: 50px;
+            width: 380.25px;
+            border-color: blue;
+            text-align: center;
+            box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.5);
+        } 
+
+        .inputWithBorder {
+            padding-top: 15px;
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+        }
+
+        .body {
+            font-family: Roboto, Arial;
+            text-align: center;
+        }
+
+        .todo-list {
+            text-align: left;
+        }
+
+        .parent {
+            margin: auto;
+            display: inline-block;
+            width: 382.25px;
+            border: solid;
+            padding: 30px;
+            box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.5);
+        }
+
+        .app-title{
+            margin-bottom: 10px;
+            color: red ;
+            font-weight: bold;
+        }
