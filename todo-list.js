@@ -1,6 +1,4 @@
-  // Model Section
-
-  let todos
+let todos
   const savedTodos = JSON.parse(localStorage.getItem('todos'))
 
   if (Array.isArray(savedTodos)) {
@@ -50,7 +48,7 @@
           element.style["border"] = "solid"
           element.style["margin-top"] = "10px"
           element.style["height"] = "50px"
-          element.style["width"] = "80%"
+          element.style["width"] = "380.25px"
           element.style["border-color"] = "blue"
           element.style["border-width"] = "1px"
           element.style["box-shadow"] = "5px 5px 3px rgb(0, 0, 0, 0.5)"
@@ -88,6 +86,11 @@
           alert("You must enter a valid date.")
           return
       }
+      if (title.length > 130) {
+        alert("You must enter a string less than 131 characters.")
+          return
+
+      }
       textbox.value = ""
       datePicker.value = ""
       createTodo(title, dueDate)
@@ -99,5 +102,4 @@
       removeTodo(idToDelete)
 
   }
-
 
