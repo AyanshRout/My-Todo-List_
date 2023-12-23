@@ -1,3 +1,4 @@
+
 .Add,
         .Clear {
             border: none;
@@ -66,6 +67,7 @@
             border-color: blue;
             text-align: center;
             box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.5);
+            
         } 
 
         .inputWithBorder {
@@ -82,6 +84,7 @@
 
         .todo-list {
             text-align: left;
+            width: 380.25px;
         }
 
         .parent {
@@ -91,10 +94,45 @@
             border: solid;
             padding: 30px;
             box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.5);
+            animation: loadingparent 1s ;
         }
 
         .app-title{
             margin-bottom: 10px;
             color: red ;
             font-weight: bold;
+            animation: loadingtitle 1.5s ease-in-out ;
+        }
+
+        @keyframes loadingtitle{
+            0%{
+               transform: translateX(-690px);
+
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+
+        @keyframes loadingparent{
+            0%{
+               transform: translateY(-690px);
+
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes hover {
+            0%{
+              transform: translateX(0);
+            }
+
+            100%{
+                transform: translateX(30px);
+            }
         }
