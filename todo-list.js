@@ -3,7 +3,7 @@ let todos
 
   if (Array.isArray(savedTodos)) {
       todos = savedTodos
-
+ 
   }
   else {
       todos = [{}]
@@ -45,24 +45,12 @@ let todos
       document.getElementById('todo-list').innerHTML = ''
       todos.forEach(function (todo) {
           let element = document.createElement('div')
-          element.style["border"] = "solid"
-          element.style["margin-top"] = "10px"
-          element.style["height"] = "50px"
-          element.style["width"] = "380.25px"
-          element.style["border-color"] = "blue"
-          element.style["border-width"] = "1px"
-          element.style["box-shadow"] = "5px 5px 3px rgb(0, 0, 0, 0.5)"
-          element.style["font-size"] = "12px"
-          element.style["font-weight"] = "500"
+          element.classList.add("div")
           element.style["padding-left"] = "7px"
           element.innerText =  todo.title + ' ' + todo.dueDate
           const deleteButton = document.createElement('button')
           deleteButton.innerText = 'Delete'
-          deleteButton.style["margin-left"] = "10px"
-          deleteButton.style["margin-top"] = "4px"
-          deleteButton.style["background-color"] = "rgb(29, 155, 240)"
-          deleteButton.style["border"] = "none"
-          deleteButton.style["border-radius"] = "3px"
+          deleteButton.classList.add("delete")
           deleteButton.onclick = deleteTodo
           deleteButton.id = todo.id
           element.appendChild(deleteButton)
@@ -102,4 +90,3 @@ let todos
       removeTodo(idToDelete)
 
   }
-
