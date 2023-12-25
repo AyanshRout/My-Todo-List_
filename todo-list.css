@@ -1,6 +1,4 @@
-
-.Add,
-        .Clear {
+        .Add,.Clear {
             border: none;
             margin-left: 5px;
             height: 22px;
@@ -80,6 +78,7 @@
         .body {
             font-family: Roboto, Arial;
             text-align: center;
+            height: 1000px;
         }
 
         .todo-list {
@@ -103,7 +102,35 @@
             font-weight: bold;
             animation: loadingtitle 1.5s ease-in-out ;
         }
+        .div{
+            border : solid;
+            margin-top : 10px;
+            height :50px;
+            width : 380.25px;
+            border-color :blue;
+            border-width :1px;
+            box-shadow : 5px 5px 3px rgb(0, 0, 0, 0.5);
+            font-size: 12px;
+            font-weight : 500;
+        }
+        .div:hover {
+              animation: hover 0.5s forwards;
+        }
+        .delete{
+            margin-left: 10px;
+            margin-top: 4px;
+            background-color: rgb(29, 155, 240);
+            border : none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
 
+        }
+        .delete:hover{
+            background-color: rgb(128, 203, 252);
+        }
+        .delete:active{
+            background-color: rgb(200, 233, 255)
+        }
         @keyframes loadingtitle{
             0%{
                transform: translateX(-690px);
@@ -133,6 +160,6 @@
             }
 
             100%{
-                transform: translateX(30px);
+                transform: translateX(10px);
             }
         }
