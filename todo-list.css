@@ -1,3 +1,4 @@
+
         .Add,.Clear {
             border: none;
             margin-left: 5px;
@@ -49,6 +50,9 @@
             border-width: 1px;
             border-color: blue;
         }
+        .date:hover{
+            cursor: pointer;
+        }
 
         .input {
             height: 20.5px;
@@ -79,6 +83,7 @@
             font-family: Roboto, Arial;
             text-align: center;
             height: 1000px;
+
         }
 
         .todo-list {
@@ -127,9 +132,21 @@
         }
         .delete:hover{
             background-color: rgb(128, 203, 252);
+            cursor: pointer;
         }
         .delete:active{
             background-color: rgb(200, 233, 255)
+        }
+        .cursor{
+            position: absolute;
+            transform: translate(-50%,-50%) scale(0);
+            box-shadow: 0 0 7px rgb(243, 94, 94);
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid rgb(243, 94, 94);
+            border-radius: 50%;
+            animation: scale-up .6s;
+            
         }
         @keyframes loadingtitle{
             0%{
@@ -161,5 +178,18 @@
 
             100%{
                 transform: translateX(10px);
+            }
+        }
+        @keyframes scale-up{
+            0%{
+                transform: translate(-50%,-50%) scale(0);
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                transform: translate(-50%,-50%) scale(1);
+                opacity: 0;
             }
         }
